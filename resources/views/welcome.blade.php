@@ -14,7 +14,7 @@ id="logo" onmouseover="this.src='../img/logottransition.png';" onmouseout="this.
         </header>
         <div class="container">
             <div class="lippy_box" id="lippy_box">
-                <img class="exit_icon" src="../img/cross.png"/>
+                <img class="exit_icon" id="exit" src="../img/cross.png"  onclick="shutit();"/>
                 <h1><span class="pinkness">Lippy</span></h1>
                 <h6>A website which finds lipstick products based on colour</h6>
                 <img class="lippy_web_img" src="../img/lippylaptop.png"/>

@@ -1,5 +1,4 @@
 function loop(){
-
 $("#head").fadeIn("slow")
      .animate({marginTop:'-50'},1600)
      .delay(1200)
@@ -7,20 +6,25 @@ $("#head").fadeIn("slow")
      .delay(1400);
 
 }
-
   loop(); 
+
+function Hide_Overlay(){
+    $("#overlay").css("visibility","hidden");
+
+}
+
+function shutit(){
+    
+    $("#lippy_box").css("visibility","hidden");
+    Hide_Overlay();
+    console.log("Clicked");
+}
 
 $('.intro').fadeOut(1500, function() {
     $('.intro').fadeIn(100);
 });
 
-function hover(element) {
-    $("#logo").setAttribute('src', '../img/logottransition.png');
-}
-function unhover(element) {
-    $("#logo").setAttribute('src', '../img/logo.png');
-}
-
+/* Overlay */
 function OverlayDisplay(event){
       event.preventDefault();
 var docHeight = $(document).height();
@@ -40,7 +44,7 @@ var docHeight = $(document).height();
       });
 }
 
-$(document).ready(function() {
+/* Sticky Header */
   var $header = $("header"),
       $clone = $header.before($header.clone().addClass("clone"));
 
@@ -48,4 +52,6 @@ $(document).ready(function() {
     var fromTop = $("body").scrollTop();
     $('body').toggleClass("down", (fromTop > 200));
   });
-});
+
+
+
